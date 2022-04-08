@@ -1,14 +1,14 @@
----
-mermaid: true
----
 # Title of mainpage here
 
 [Link to another page](./page2.md).
 
 Test 123
 
-```mermaid
+
+<div class="mermaid">
 graph TD;
     A-->B;
-    B-->C;
-```
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
