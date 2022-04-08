@@ -1,3 +1,9 @@
+---
+layout: default
+mermaid : true
+title: Hi
+---
+
 # Title of mainpage here
 
 [Link to another page](./page2.md).
