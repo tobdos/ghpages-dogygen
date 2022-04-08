@@ -1,6 +1,6 @@
 ---
 layout: default
-mermaid : true
+use_mermaid : true
 title: Hi
 ---
 
