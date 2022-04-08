@@ -5,3 +5,9 @@
 Test 123
 
 *ListItem
+
+```mermaid
+graph TD;
+A-->B;
+B-->C;
+```
