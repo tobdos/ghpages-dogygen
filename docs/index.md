@@ -1,7 +1,7 @@
 ---
 mermaid: true
 ---
-# Title of mainpage here
+# Mermaid Testing
 
 [Link to another page](./page2.md).
 
