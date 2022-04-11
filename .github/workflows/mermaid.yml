@@ -6,8 +6,6 @@ on:
       - '**/*.mermaid'
       - '**/*.mmd'
       - '**/*.md'
-    branches-ignore:
-      - main
       
 jobs:
   build:
