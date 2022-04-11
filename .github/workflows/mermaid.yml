@@ -6,6 +6,8 @@ on:
       - '**/*.mermaid'
       - '**/*.mmd'
       - '**/*.md'
+    branches-ignore:
+      - 'main'
       
 jobs:
   build:
@@ -38,4 +40,14 @@ jobs:
       - name: show changes
         run: |
           git status
-
+    
+      - name: Check out repository code
+        uses: actions/checkout@v2
+        
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: "main"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_label: "feature, automated pr"
+          pr_title: "[Example] Simple demo"
