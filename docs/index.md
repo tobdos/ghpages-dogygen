@@ -16,7 +16,6 @@ Inhalt...
 graph TD;
     A-->B;
     B-->A;
-    A-->C;
     B-->D;
 ```
 
