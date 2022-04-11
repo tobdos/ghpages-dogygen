@@ -40,10 +40,7 @@ jobs:
       - name: show changes
         run: |
           git status
-    
-      - name: Check out repository code
-        uses: actions/checkout@v2
-        
+      
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
