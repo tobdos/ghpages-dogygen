@@ -1,0 +1,43 @@
+name: 'Compile Mermaid'
+
+on:
+  push:
+    paths:
+      - '**/*.mermaid'
+      - '**/*.mmd'
+      - '**/*.md'
+    branches-ignore:
+      - main
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: get changed files
+        id: getfile
+        run: |
+          echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep -e '.*\.md$' -e '.*\.mmd$' -e '.*\.mermaid$' | xargs)"
+
+      - name: mermaid files changed
+        run: |
+          echo $
+
+      - name: compile mermaid
+        uses: neenjaw/compile-mermaid-markdown-action@v0.3.3
+        with:
+          files: $
+          output: 'docs/images'
+        env:
+          HIDE_CODEBLOCKS: 1
+          ABSOLUTE_IMAGE_LINKS: 1
+          OUTPUT_FILE_TYPE: "svg"
+
+      - name: show changes
+        run: |
+          git status
+
