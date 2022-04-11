@@ -6,8 +6,8 @@ on:
       - '**/*.mermaid'
       - '**/*.mmd'
       - '**/*.md'
-    branches-ignore:
-      - 'main'
+#    branches-ignore:
+#      - 'main'
       
 jobs:
   build:
@@ -40,11 +40,23 @@ jobs:
       - name: show changes
         run: |
           git status
-      
-      - name: pull-request
-        uses: repo-sync/pull-request@v2
+         
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          destination_branch: "main"
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          pr_label: "feature, automated pr"
-          pr_title: "[Example] Simple demo"
+
+# PR Workflow      
+#      - name: pull-request
+#        uses: repo-sync/pull-request@v2
+#        with:
+#          destination_branch: "main"
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          pr_label: "feature, automated pr"
+#          pr_title: "[Example] Simple demo"
