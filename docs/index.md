@@ -11,5 +11,6 @@ Test 123
 graph TD;
     A-->B;
     A-->C;
+    A-->D;
     B-->D;
 ```
