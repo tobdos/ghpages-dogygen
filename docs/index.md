@@ -17,7 +17,6 @@ graph TD;
     A-->B;
     B-->A;
     B-->D;
-    D-->A;
 ```
 
 </details>
