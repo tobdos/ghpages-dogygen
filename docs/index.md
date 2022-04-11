@@ -1,6 +1,3 @@
----
-mermaid: true
----
 # Mermaid Testing
 
 [Link to page2](./page2.md).
