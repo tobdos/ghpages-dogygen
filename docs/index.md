@@ -3,7 +3,7 @@
 [Link to page2](./page2.md).
 
 Inhalt...
-* 1 Test 8
+* 1 Test 9
 * 2 Test 7
 * 3 Test3
 
@@ -15,7 +15,6 @@ Inhalt...
 ```mermaid
 graph TD;
     A-->B;
-    B-->C;
     B-->A;
     B-->D;
 ```
