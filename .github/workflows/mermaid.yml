@@ -27,7 +27,7 @@ jobs:
         uses: neenjaw/compile-mermaid-markdown-action@0.3.1
         with:
           files: ${{ steps.getfile.outputs.files }}
-          output: 'https://github.com/tobdos/ghpages-testing/blob/main/docs/images/'
+          output: 'docs/images'
         env:
           HIDE_CODEBLOCKS: 1
           ABSOLUTE_IMAGE_LINKS: 1
