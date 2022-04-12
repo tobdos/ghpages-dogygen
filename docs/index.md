@@ -15,6 +15,7 @@ Inhalt...
 ```mermaid
 graph TD;
     A-->B;
+    B-->A;
     C-->D;
     B-->D;
 ```
