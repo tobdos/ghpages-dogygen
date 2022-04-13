@@ -3,7 +3,7 @@
 #include <iostream>
 /*
 multiline comment test
-test2
+test
 test3
 */
 int main() {
