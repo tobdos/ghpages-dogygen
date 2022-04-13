@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['mermaid_20testing_202_0',['Mermaid Testing 2',['../md_src_testmarkdown2.html',1,'']]]
+  ['mainpage_0',['Mainpage',['../md_docs_mainpage.html',1,'']]],
+  ['mermaid_20testing_202_1',['Mermaid Testing 2',['../md_src_testmarkdown2.html',1,'']]]
 ];
