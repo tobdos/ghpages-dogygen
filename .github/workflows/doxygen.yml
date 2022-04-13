@@ -3,7 +3,7 @@ name: 'generate doxygen for gh-pges'
 on:
   push:
     paths:
-      - "deprecated/**"
+      - "deprecated/**" #not used atm
 jobs:
   build:
     runs-on: ubuntu-latest
