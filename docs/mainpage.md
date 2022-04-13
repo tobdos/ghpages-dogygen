@@ -1,4 +1,4 @@
-# This is the mainpage in markdown
+# Mainpage
 
 
 Inhalt...
