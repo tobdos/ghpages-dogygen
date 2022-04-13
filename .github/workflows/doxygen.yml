@@ -3,8 +3,7 @@ name: 'generate doxygen for gh-pges'
 on:
   push:
     paths:
-      - '**/*.cpp'
-      - '**/*.c'
+      - "src/**"
 jobs:
   build:
     runs-on: ubuntu-latest
