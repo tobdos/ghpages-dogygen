@@ -3,7 +3,7 @@ name: 'Compile Mermaid in Markdown'
 on:
   push:
     paths:
-      - '**/*.md'
+      - 'src/**'
 
 jobs:
   build:
@@ -38,6 +38,39 @@ jobs:
           sudo rm -rf docs/images
           sudo mv -f images docs/images
 
+      - name: show changes
+        run: |
+          git status
+      
+      - name: add untracked files
+        run: |
+          git add .
+          
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+  doxi:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          
+      - name: doxygen testing
+        uses: mattnotmitt/doxygen-action@v1.9.2
+        with:
+          doxyfile-path: 'docs/Doxygen/Doxyfile.in'
+          
       - name: show changes
         run: |
           git status
