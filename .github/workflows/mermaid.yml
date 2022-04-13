@@ -35,8 +35,8 @@ jobs:
 
       - name: move folder
         run: |
-          rm -rf docs/images
-          mv -f images docs/images
+          sudo rm -rf docs/images
+          sudo mv -f images docs/images
 
       - name: show changes
         run: |
