@@ -16,7 +16,8 @@ jobs:
       - name: doxygen testing
         uses: mattnotmitt/doxygen-action@v1.9.2
         with:
-          doxyfile-path: 'docs/Doxygen/Doxyfile.in'
+          working-directory: 'docs/'
+          doxyfile-path: 'Doxygen/Doxyfile.in'
           
       - name: show changes
         run: |
