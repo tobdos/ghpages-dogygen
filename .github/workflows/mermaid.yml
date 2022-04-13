@@ -35,6 +35,7 @@ jobs:
 
       - name: move folder
         run: |
+          rmdir -r docs/images
           mv -f images docs/images
 
       - name: show changes
