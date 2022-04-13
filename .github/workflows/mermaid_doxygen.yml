@@ -36,8 +36,7 @@ jobs:
 
       - name: move folder
         run: |
-          sudo rm -rf docs/images
-          sudo mv -f images docs/images
+          sudo mv -f images/* docs/images/
 
       - name: doxygen testing
         uses: mattnotmitt/doxygen-action@v1.9.2
