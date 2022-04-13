@@ -1,0 +1,31 @@
+name: 'generate doxygen for gh-pges'
+
+on:
+  push:
+    paths:
+      - '**/*.cpp'
+
+- name: doxygen testing
+        uses: mattnotmitt/doxygen-action@v1.9.2
+        with:
+          working-directory: 'doxygenTest/'
+          doxyfile-path: 'docs/Doxygen'
+          
+      - name: show changes
+        run: |
+          git status
+      
+      - name: add untracked files
+        run: |
+          git add .
+          
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
