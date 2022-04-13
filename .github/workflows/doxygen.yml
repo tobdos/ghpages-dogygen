@@ -4,8 +4,16 @@ on:
   push:
     paths:
       - '**/*.cpp'
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-- name: doxygen testing
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+          
+      - name: doxygen testing
         uses: mattnotmitt/doxygen-action@v1.9.2
         with:
           working-directory: 'doxygenTest/'
