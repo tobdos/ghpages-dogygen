@@ -1,4 +1,4 @@
-# Mermaid Testing
+# This is the mainpage in markdown
 
 
 Inhalt...
