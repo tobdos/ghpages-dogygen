@@ -25,6 +25,7 @@
  */
 int doxygen_example(){
     std::cout << " This is a doxygen example function";
+    return 0;
 }
 
 /** 
