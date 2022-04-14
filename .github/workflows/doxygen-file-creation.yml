@@ -1,4 +1,4 @@
-name: 'render mermaid to svg & create doxygen'
+name: 'create doxygen html files'
 
 on:
   push:
