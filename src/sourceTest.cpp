@@ -10,10 +10,9 @@
  */
 
 #include <iostream>
-/**
- * multiline comment test
- * test12
- * test3
+/** 
+ * \brief main function
+ * A long description of the main function
  */
 int main() {
     std::cout << "Hello World!";
