@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 /** 
- * \brief calculates the sum of the two parameters and adds one. 
+ * \brief Calculates the sum of the two parameters and adds one. 
  * \param [in] a first operand
  * \param [in] b second operand
  * 
@@ -24,8 +24,8 @@ int sum(int a, int b)
 }
 
 /** 
- * \brief main function of my project 
- * A long version of the desciption 
+ * \brief Main function of my project.
+ * \details A long version of the desciption. 
 */
 int main()
 {
