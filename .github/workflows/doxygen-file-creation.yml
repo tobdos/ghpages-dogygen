@@ -16,7 +16,7 @@ jobs:
       
       - name: remove old html
         run: |
-          sudo rm -r
+          sudo rm -r docs/html
           
       - name: doxygen testing
         uses: mattnotmitt/doxygen-action@v1.9.2
