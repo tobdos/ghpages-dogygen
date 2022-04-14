@@ -16,8 +16,8 @@ jobs:
       
       - name: remove old html
         run: |
-          sudo rm -r /docs/html
-          [ ! -d "/docs/html" ] && echo "Directory /dir1/ DOES NOT exists."
+          sudo rm -r docs/html
+          [ ! -d "/docs/html/" ] && echo "Directory /docs/html/ DOES NOT exists."
           
       - name: doxygen testing
         uses: mattnotmitt/doxygen-action@v1.9.2
