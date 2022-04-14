@@ -30,7 +30,7 @@ int doxygen_example(){
 }
 
 /** 
- * \brief main function
+ * \brief Brief main function description
  * \details A long description of the main function.
  */
 int main() {
