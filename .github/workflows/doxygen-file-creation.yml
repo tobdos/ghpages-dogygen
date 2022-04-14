@@ -14,9 +14,9 @@ jobs:
         with:
           fetch-depth: 2
       
-      - name remove old html
+      - name: remove old html
         run: |
-          sudo rm -r /docs/html
+          sudo rm -r
           
       - name: doxygen testing
         uses: mattnotmitt/doxygen-action@v1.9.2
