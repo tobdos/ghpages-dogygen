@@ -1,5 +1,5 @@
 /**
- * @file main.c
+ * \file
  * @author dosetobi
  * @brief 
  * @version 0.1
